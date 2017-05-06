@@ -1,0 +1,4 @@
+#屏蔽node_modules
+/node_modules
+#屏蔽.zip
+*.zip

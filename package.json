@@ -1,0 +1,32 @@
+{
+  "name": "sass_gulp",
+  "version": "0.0.1",
+  "description": "仅供gz1701班学习",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "laoxie",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForLeaf/cloneGit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ForLeaf/cloneGit/issues"
+  },
+  "homepage": "https://github.com/ForLeaf/cloneGit#readme"
+}
