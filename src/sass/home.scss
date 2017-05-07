@@ -1,0 +1,45 @@
+//最后编译为一个css文件
+//把common.scss的内容复制过来
+
+// 引入前设置同名变量，会覆盖默认变量
+$fontSize:16px;
+//@import 'common';
+
+$mainColor:#f60;
+$fontSize:16px !default;
+
+$position:bottom;
+
+a{
+	//局部变量
+	$fontSize:22px;
+
+	// 在局部创建全局变量
+	$pd:10px !global;
+
+	color:#333;
+	//background-color:$mainColor;
+	font-size:$fontSize;
+}
+
+body{
+	//font-size:$fontSize;外部不能使用局部变量
+	padding:$pd;
+	background-color:#f5f5f5;
+}
+
+nav{
+	font-size:$fontSize;
+	border-#{$position}:10px solid #ccc;
+	a{
+		color:$mainColor;
+		&:hover{color:#f00;}
+	}
+	
+}
+
+.container{
+	border:1px solid #ccc;
+	padding:15px;
+	min-height:300px;
+}

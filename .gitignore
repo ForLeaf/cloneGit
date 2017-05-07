@@ -1,4 +1,5 @@
-#屏蔽node_modules
+#过滤根目录下的文件
 /node_modules
-#屏蔽.zip
+
+#过滤文件
 *.zip
