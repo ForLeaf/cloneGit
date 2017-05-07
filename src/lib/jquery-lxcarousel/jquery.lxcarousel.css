@@ -1,0 +1,10 @@
+.lxcarousel{position:relative;margin:0 auto;width:810px;height:320px;overflow:hidden;}
+.lxcarousel ul{position:relative;left:0;top:0;}
+.lxcarousel ul li{height:320px;overflow:hidden;}
+.lxcarousel .page{position: absolute;right:15px;bottom:15px;}
+.lxcarousel .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;text-align:center;background-color:#efefef;border-radius:50%;}
+.lxcarousel .page span.active{background-color:#f60;color:#fff;}
+.lxcarousel 
+.lxcarousel .prev,.lxcarousel .next{position: absolute;width:30px;height:50px;line-height:50px;background-color:#f60;color:#fff;text-align:center;}
+.lxcarousel .prev{left:0;top:0;bottom:0;margin:auto 0;}
+.lxcarousel .next{right:0;top:50%;margin-top:-25px;}

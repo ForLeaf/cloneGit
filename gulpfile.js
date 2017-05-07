@@ -65,7 +65,7 @@ gulp.task('server',function(){
 		port:999,
 
 		//监听文件的修改，自动刷新浏览器
-		files:['./src/*.html','./src/css/*.css']
+		files:['./src/*.html','./src/css/*.css','./src/html/*.html']
 	});
 	gulp.watch('src/sass/*.scss',['compileSass']);
 });
