@@ -1,0 +1,184 @@
+@import 'reset';
+@import 'common';
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.foot{
+  border-top:1px solid #333;
+}
+.foot-long{
+    border-bottom:1px solid #eee;
+    padding-top:10px;
+    li{
+        float: left;
+        box-sizing: border-box;
+        width: 240px;
+        height: 112px;
+        position: relative;
+        padding-left: 80px;
+        .foot-long-desc{
+            margin-top: 25px;
+            .btit{
+                font-size: 18px;
+                line-height: 30px;
+                color: #C81623;
+            }
+            .stit{
+                font-size: 12px;
+                line-height: 18px;;
+            }
+        }
+        .foot_sm_logo{
+            width: 61px;
+            height: 61px;
+            position: absolute;
+            left:10px;
+            top:20px;
+        }
+        .zh{
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -271px -105px;
+        }
+        .yo{
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -360px -105px;
+        }
+        .di{
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -450px -105px;
+        }
+        .qi{
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -540px -105px;
+        }
+        .qu{
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -625px -105px;
+        }
+    }
+
+}
+.foot-help{
+    height: 200px;
+    width: 100%;
+    margin-top:30px;
+    .foot-help-relation{
+        width: 180px;
+        float: left;
+        margin-right:55px;
+        .wx{
+            margin-left: 10px;
+            box-sizing: border-box;
+            width:55px;
+            height: 70px;
+            padding-top: 55px;
+            padding-left: 8px;
+            font-size: 12px;
+            color: #bbb;
+        }
+        .weibo{
+            float: left;
+            background: url("../../src/css/images/foot-sprite.png") no-repeat 0 -105px;
+        }
+        .weixin{
+            float: right;
+            background: url("../../src/css/images/foot-sprite.png") no-repeat -46px -105px;
+            padding-left: 22px;
+        }
+        .social-help-tel{
+          clear:both;
+          font-size: 12px;
+          padding-top:20px;
+          color: #7e7e7e;
+          p{
+            float: left;
+          }
+          .phone{
+            width: 100px;
+            float: right;
+            margin-right:8px;
+              p{
+                  margin-bottom: 8px;
+              }
+          }
+          .server_date{
+            margin-top: 10px;
+
+          }
+        }
+    }
+}
+.foot-help{
+  .foot-split{
+    float: left;
+    height: 170px;
+    padding:0 55px;
+    border-left:1px solid #ccc;
+    a{
+        display: inline-block;
+        height: 20px;
+      font-size: 12px;
+      line-height: 18px;
+      color: #7e7e7e;
+    }
+    dt{
+        height: 30px;
+      a{
+          display: inline-block;
+          height: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333;
+      }
+    }
+  }
+}
+.foot-help{
+  border-bottom:1px solid #eee;
+  .foot-help-appMa{
+    width: 120px;
+    height: 170px;
+    border-left:1px solid #ccc;
+    float: left;
+    padding-left:40px;
+  }
+}
+.foot{
+  .bottomlist{
+    padding-top: 26px;
+    text-align: center;
+    height: 144px;
+    width: 100%;
+    .hp-copy{
+      li,span{
+        display: inline-block;
+      }
+      li{
+          margin: 0 10px;
+        a{
+          font-size: 12px;
+          line-height:3;
+          color: #666;
+        }
+      }
+        span{
+            font-size: 12px;
+            line-height:3;
+            color: #666;
+        }
+    }
+    .hp-copyright{
+      font-size: 12px;
+      color: #666;
+      line-height: 3;
+    }
+    .authentication{
+        width: 980px;
+        height: 44px;
+        background: url("../../src/css/images/foot-sprite.png") no-repeat 0 -23px;
+        margin-left: 120px;
+        a{
+            display: inline-block;
+            box-sizing: border-box;
+            height: 44px;
+            width: 98px;
+        }
+    }
+  }
+}

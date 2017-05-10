@@ -1,0 +1,159 @@
+* { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+img { display: block; border: 0; }
+
+input { outline: none; }
+
+.clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+
+* { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+img { display: block; border: 0; }
+
+input { outline: none; }
+
+.clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+
+.container { width: 1200px; margin: 0 auto; }
+
+.foot { border-top: 1px solid #333; }
+
+.foot-long { border-bottom: 1px solid #eee; padding-top: 10px; }
+
+.foot-long li { float: left; box-sizing: border-box; width: 240px; height: 112px; position: relative; padding-left: 80px; }
+
+.foot-long li .foot-long-desc { margin-top: 25px; }
+
+.foot-long li .foot-long-desc .btit { font-size: 18px; line-height: 30px; color: #C81623; }
+
+.foot-long li .foot-long-desc .stit { font-size: 12px; line-height: 18px; }
+
+.foot-long li .foot_sm_logo { width: 61px; height: 61px; position: absolute; left: 10px; top: 20px; }
+
+.foot-long li .zh { background: url("../../src/css/images/foot-sprite.png") no-repeat -271px -105px; }
+
+.foot-long li .yo { background: url("../../src/css/images/foot-sprite.png") no-repeat -360px -105px; }
+
+.foot-long li .di { background: url("../../src/css/images/foot-sprite.png") no-repeat -450px -105px; }
+
+.foot-long li .qi { background: url("../../src/css/images/foot-sprite.png") no-repeat -540px -105px; }
+
+.foot-long li .qu { background: url("../../src/css/images/foot-sprite.png") no-repeat -625px -105px; }
+
+.foot-help { height: 200px; width: 100%; margin-top: 30px; }
+
+.foot-help .foot-help-relation { width: 180px; float: left; margin-right: 55px; }
+
+.foot-help .foot-help-relation .wx { margin-left: 10px; box-sizing: border-box; width: 55px; height: 70px; padding-top: 55px; padding-left: 8px; font-size: 12px; color: #bbb; }
+
+.foot-help .foot-help-relation .weibo { float: left; background: url("../../src/css/images/foot-sprite.png") no-repeat 0 -105px; }
+
+.foot-help .foot-help-relation .weixin { float: right; background: url("../../src/css/images/foot-sprite.png") no-repeat -46px -105px; padding-left: 22px; }
+
+.foot-help .foot-help-relation .social-help-tel { clear: both; font-size: 12px; padding-top: 20px; color: #7e7e7e; }
+
+.foot-help .foot-help-relation .social-help-tel p { float: left; }
+
+.foot-help .foot-help-relation .social-help-tel .phone { width: 100px; float: right; margin-right: 8px; }
+
+.foot-help .foot-help-relation .social-help-tel .phone p { margin-bottom: 8px; }
+
+.foot-help .foot-help-relation .social-help-tel .server_date { margin-top: 10px; }
+
+.foot-help .foot-split { float: left; height: 170px; padding: 0 55px; border-left: 1px solid #ccc; }
+
+.foot-help .foot-split a { display: inline-block; height: 20px; font-size: 12px; line-height: 18px; color: #7e7e7e; }
+
+.foot-help .foot-split dt { height: 30px; }
+
+.foot-help .foot-split dt a { display: inline-block; height: 20px; font-size: 16px; line-height: 20px; color: #333; }
+
+.foot-help { border-bottom: 1px solid #eee; }
+
+.foot-help .foot-help-appMa { width: 120px; height: 170px; border-left: 1px solid #ccc; float: left; padding-left: 40px; }
+
+.foot .bottomlist { padding-top: 26px; text-align: center; height: 144px; width: 100%; }
+
+.foot .bottomlist .hp-copy li, .foot .bottomlist .hp-copy span { display: inline-block; }
+
+.foot .bottomlist .hp-copy li { margin: 0 10px; }
+
+.foot .bottomlist .hp-copy li a { font-size: 12px; line-height: 3; color: #666; }
+
+.foot .bottomlist .hp-copy span { font-size: 12px; line-height: 3; color: #666; }
+
+.foot .bottomlist .hp-copyright { font-size: 12px; color: #666; line-height: 3; }
+
+.foot .bottomlist .authentication { width: 980px; height: 44px; background: url("../../src/css/images/foot-sprite.png") no-repeat 0 -23px; margin-left: 120px; }
+
+.foot .bottomlist .authentication a { display: inline-block; box-sizing: border-box; height: 44px; width: 98px; }
+
+.container { width: 1200px; margin: 0 auto; }
+
+.login_header { height: 120px; }
+
+.login_header .container { height: 100%; position: relative; }
+
+.login_header .container .logo { position: absolute; left: 0; top: 30px; }
+
+.login_header .container .service_logo { float: right; }
+
+.login_header .container .service_logo li { float: left; box-sizing: border-box; width: 240px; height: 120px; position: relative; padding-left: 80px; padding-top: 40px; }
+
+.login_header .container .service_logo li .logo_img { width: 61px; height: 61px; position: absolute; left: 0; top: 30px; }
+
+.login_header .container .service_logo li .fx { background: url("../../src/css/images/foot-sprite.png") no-repeat -270px -105px; }
+
+.login_header .container .service_logo li .sx { background: url("../../src/css/images/foot-sprite.png") no-repeat -360px -105px; }
+
+.login_header .container .service_logo li .tx { background: url("../../src/css/images/foot-sprite.png") no-repeat -450px -105px; }
+
+.login_header .container .service_logo li .tit_top { color: #C81623; font-size: 18px; line-height: 28px; }
+
+.login_header .container .service_logo li .tit_bottom { font-size: 12px; line-height: 16px; color: #333; }
+
+.login_main { height: 557px; }
+
+.login_main .container { height: 100%; position: relative; }
+
+.login_main .container .bigImg { float: left; }
+
+.login_main .container .form_right { box-sizing: border-box; width: 350px; height: 500px; position: absolute; right: 0; top: 30px; border: 1px solid #ccc; box-shadow: 0 0 10px 2px #ccc; }
+
+.login_main .container .form_right .form_top { height: 50px; width: 100%; border-bottom: 1px solid #eee; font: 12px/50px 'arial'; background: #f5f5f5; }
+
+.login_main .container .form_right .form_top span { margin-left: 20px; color: #333; }
+
+.login_main .container .form_right .form_top a { margin-right: 15px; float: right; color: #ff6600; }
+
+.login_main .container .form_right .login_form { width: 300px; padding: 20px 0; margin: 0 25px; }
+
+.login_main .container .form_right .login_form .login_form_text { width: 100%; height: 37px; font: 12px/37px 'arial'; }
+
+.login_main .container .form_right .login_form .login_form_text label { display: inline-block; box-sizing: border-box; width: 60px; height: 35px; text-align: left; vertical-align: top; }
+
+.login_main .container .form_right .login_form .login_form_text div { display: inline-block; box-sizing: border-box; width: 227px; height: 37px; border: 1px solid #ccc; border-radius: 4px; position: relative; }
+
+.login_main .container .form_right .login_form .login_form_text div input { box-sizing: border-box; width: 100%; height: 100%; padding: 0 40px 0 20px; border: 1px solid transparent; border-radius: 4px; }
+
+.login_main .container .form_right .login_form .login_form_text div em { display: block; width: 40px; height: 40px; position: absolute; right: 0; top: -2px; }
+
+.login_main .container .form_right .login_form .login_form_text div .xm { background: url("../../src/css/images/icon_sign_up_page_system.png") no-repeat 0 0; }
+
+.login_main .container .form_right .login_form .login_form_text div .mm { background: url("../../src/css/images/icon_sign_up_key.png") no-repeat 0 0; }
+
+.login_main .container .form_right .login_form .login_form_text #yanzhengma { box-sizing: border-box; width: 142px; height: 36px; border: 1px solid #ccc; border-radius: 4px; padding-left: 12px; vertical-align: top; }
+
+.login_main .container .form_right .login_form .login_form_text #duanxin { box-sizing: border-box; width: 142px; height: 36px; border: 1px solid #ccc; border-radius: 4px; padding-left: 12px; vertical-align: top; }
+
+.login_main .container .form_right .login_form .login_form_text .verCode, .login_main .container .form_right .login_form .login_form_text .noteCode { box-sizing: border-box; width: 92px; height: 36px; border-radius: 4px; background-color: #eee; }
+
+.login_main .container .form_right .login_form .login_form_msg { width: 100%; height: 30px; font: 12px/30px 'arial'; }

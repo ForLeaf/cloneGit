@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/side_cart.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="../js/require.js" data-main="side_cart.js"></script>
+
+</head>
+<body>
+    <div class="side_cart">
+        <ul class="right-guide">
+            <li class="mine">
+                <div class="mark">个人中心</div>
+                <div class="icon"><i class="iconfont icon-wo"></i></div>
+            </li>
+            <li class="cart">
+                <div class="mark">购物车</div>
+                <div class="icon"><i class="iconfont icon-gouwuche"></i></div>
+                <span class="num">1</span>
+            </li>
+            <li>
+                <div class="mark">我的收藏</div>
+                <div class="icon"><i class="iconfont icon-heart"></i></div>
+            </li>
+            <li>
+                <div class="mark">优惠券</div>
+                <div class="icon"><i class="iconfont icon-youhuiquan"></i></div>
+            </li>
+            <li>
+                <div class="mark">我的足迹</div>
+                <div class="icon"><i class="iconfont icon-zuji"></i></div>
+            </li>
+            <li>
+                <div class="mark">奥莱克服</div>
+                <div class="icon"><i class="iconfont icon-kefu"></i></div>
+            </li>
+            <li>
+                <div class="mark">返回顶部</div>
+                <div class="icon"><i class="iconfont icon-fanhuidingbu"></i></div>
+            </li>
+        </ul>
+        <div class="right-cont">
+            <div class="right-cont-item myCenter">
+                <div class="myCenter_top"><span class="myCenter_closebtn">&times;</span></div>
+                <div class="myCenter_main">
+                    <div class="myCenter_logo"></div>
+                    <form action="#" method="post">
+                        <div class="loginCg"></div>
+                        <div class="myCenter_cont na">
+                            <input type="text" id="username" placeholder="用户名">
+                        </div>
+                        <div class="myCenter_cont pw">
+                            <input type="password" id="password" placeholder="密码">
+                        </div>
+                        <div class="myCenter_cont ca">
+                            <input type="text" class="result" placeholder="计算结果">
+                            <div class="equation"></div>
+                        </div>
+                        <div class="myCenter_cont re">
+                            <input type="checkbox" class="check_pwd">
+                            <span>记住密码</span>
+                        </div>
+                        <div class="myCenter_cont su">
+                            <input type="submit" class="sub" value="登录">
+                        </div>
+                    </form>
+                    <div class="myCenter_other">
+                        <a href="#">忘记密码</a>
+                        <a href="#" class="zhuce">注册账号</a>
+                    </div>
+                </div>
+                <div class="myCenter_main_wx">
+                    <div class="wx_login"></div>
+                    <div class="wx_main">
+                        <div class="erwei_img">
+                            <img src="../../src/img/qrcode.jpg" alt="">
+                        </div>
+                        <div class="shaoyishao">
+                            <div class="sys"></div>
+                            <p>打开 <span>最新版</span>手机奥莱购</p>
+                            <p>扫一扫登录</p>
+                        </div>
+                        <div class="wx_login_other">
+                            <input type="checkbox" class="checked_pwd">
+                            <span>记住密码</span>
+                            <a href="#">注册账号</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-cont-item myCart">
+                <div class="myCart_top">
+                    <div>
+                        <input type="checkbox" class="checkall">
+                        <span>全选</span>
+                    </div>
+                    <span class="closebtn">&times;</span>
+
+                </div>
+                <div class="cartlist">
+                    <div class="goods">
+                        <div class="check">
+                            <input type="checkbox">
+                        </div>
+                        <div class="goods_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="goods_msg">
+                            <p class="goods_tit">初语 字母印花侧面条纹哈伦风束脚卫衣裤 8644411609</p>
+                            <p class="goods_style">颜色：黑色   尺码：L</p>
+                            <div class="price_msg">
+                                <span class="goods_price">159.00</span>
+                                <span class="sum">*1</span>
+                                <span class="discount">可优惠¥0.00</span>
+                            </div>
+                        </div>
+                        <span class="goods_closebtn">&times;</span>
+                    </div>
+                </div>
+                <div class="myCart_foot">
+                    <div class="goodsmsg">
+                        <span class="sum">
+                            已选
+                            <span></span>
+                        </span>
+                        <span class="discount">
+                            已省：
+                            <span></span>
+                        </span>
+                        <span class="price">
+                            合计：
+                            <span></span>
+                        </span>
+                    </div>
+                    <div class="account-btn">
+                        <a href="#">去购物车中结算</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-cont-item myFavo"></div>
+            <div class="right-cont-item myCoupon"></div>
+            <div class="right-cont-item myTrace"></div>
+        </div>
+    </div>
+</body>
+</html>

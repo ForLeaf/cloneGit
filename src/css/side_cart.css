@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+img { display: block; border: 0; }
+
+input { outline: none; }
+
+.clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+
+.side_cart { position: fixed; right: -3px; top: 20px; width: 385px; height: 600px; border: 1px solid transparent; }
+
+.side_cart .right-cont { box-sizing: border-box; width: 329px; height: 600px; background-color: #fff; z-index: 22; position: absolute; right: 0; top: 0; border: 1px solid #ccc; }
+
+.side_cart .right-guide { box-sizing: border-box; width: 51px; height: 364px; z-index: 10; position: absolute; left: 8px; top: 0; }
+
+.right-guide li { cursor: pointer; box-sizing: border-box; width: 50px; height: 50px; margin-bottom: 6px; border: 1px solid #eee; border-radius: 6px 0 0 6px; position: relative; }
+
+.right-guide li:hover > .mark { left: -100px; }
+
+.right-guide li .mark { display: block; }
+
+.right-guide li .icon { width: 49px; height: 48px; line-height: 50px; text-align: center; background-color: #fff; border-radius: 6px 0 0 6px; position: absolute; left: 0; top: 0; z-index: 22; }
+
+.right-guide li .icon .iconfont { font-size: 22px; }
+
+.right-guide li .mark { height: 50px; width: 120px; display: block; border: 1px solid #eee; border-radius: 6px 0 0 6px; background-color: #fff; box-sizing: border-box; padding-left: 20px; font: 14px/50px 'arial'; position: absolute; left: 0; top: 0; z-index: 10; transition: all 0.5s linear; }
+
+.right-guide .cart span { display: inline-block; background-color: #C81417; width: 20px; height: 16px; border-radius: 4px; text-align: center; font: 12px/16px 'arial'; color: #fff; position: absolute; right: 2px; top: 2px; z-index: 44; }
+
+.right-cont .myCart_top { width: 100%; height: 50px; box-sizing: border-box; border-bottom: 1px solid #eee; position: relative; }
+
+.right-cont .myCart_top div { position: absolute; top: 16px; left: 20px; }
+
+.right-cont .myCart_top div .checkall { margin-right: 6px; }
+
+.right-cont .myCart_top .closebtn { position: absolute; right: 16px; top: 16px; font-size: 20px; line-height: 20px; cursor: pointer; }
+
+.right-cont .cartlist { width: 100%; height: 480px; overflow-y: hidden; border-bottom: 1px solid #eee; }
+
+.right-cont .myCart_foot .goodsmsg { font-size: 12px; height: 30px; border-bottom: 1px solid #eee; box-sizing: border-box; line-height: 30px; }
+
+.right-cont .myCart_foot .goodsmsg .sum { display: inline-block; margin: 0 20px; color: #bbb; }
+
+.right-cont .myCart_foot .goodsmsg .discount { display: inline-block; margin: 0 20px; color: #333; }
+
+.right-cont .myCart_foot .goodsmsg .discount span:before { content: "￥"; }
+
+.right-cont .myCart_foot .goodsmsg .price { display: inline-block; margin: 0 20px; color: #f00; }
+
+.right-cont .myCart_foot .goodsmsg .price span:before { content: "￥"; }
+
+.right-cont .myCart_foot .account-btn { width: 100%; box-sizing: border-box; padding: 8px; text-align: center; }
+
+.right-cont .myCart_foot .account-btn a { display: inline-block; width: 200px; font: 12px/24px 'atral'; text-align: center; background-color: #C81417; color: #fff; border-radius: 4px; }
+
+.right-cont .myCart_foot .account-btn a:hover { background-color: #9a0f12; }
+
+.cartlist .goods { width: 100%; box-sizing: border-box; height: 100px; border-bottom: 1px solid #eee; margin-top: 4px; margin-bottom: 6px; background-color: #efefef; position: relative; overflow: hidden; }
+
+.cartlist .goods .check { height: 100%; float: left; box-sizing: border-box; padding-left: 10px; padding-top: 40px; padding-right: 4px; }
+
+.cartlist .goods .goods_img { box-sizing: border-box; height: 100%; width: 90px; float: left; padding: 10px 0; }
+
+.cartlist .goods .goods_img img { width: 100%; }
+
+.cartlist .goods .goods_msg { font: 12px/1.4 'arial'; padding-right: 14px; padding-top: 18px; }
+
+.cartlist .goods .goods_msg .goods_style { margin-top: 4px; color: #bbb; }
+
+.cartlist .goods .goods_msg .price_msg { margin-top: 4px; }
+
+.cartlist .goods .goods_msg .price_msg .goods_price { color: #C81417; margin: 2px; }
+
+.cartlist .goods .goods_msg .price_msg .goods_price:before { content: "￥"; }
+
+.cartlist .goods .goods_msg .price_msg .sum { color: #aaa; margin: 4px; }
+
+.cartlist .goods .goods_msg .price_msg .discount { color: #f60; margin: 4px; }
+
+.cartlist .goods .goods_closebtn { position: absolute; top: 2px; right: 2px; font: 14px/1; cursor: pointer; }
+
+.right-cont .myCart { display: none; }
+
+.right-cont .myCenter { width: 100%; height: 100%; }
+
+.right-cont .myCenter .myCenter_top { box-sizing: border-box; width: 100%; height: 50px; border-bottom: 1px solid #eee; }
+
+.right-cont .myCenter .myCenter_top .myCenter_closebtn { font: 20px/1 'arial'; position: absolute; top: 10px; right: 10px; }
+
+.right-cont .myCenter .myCenter_main_wx { width: 100%; height: 400px; padding-top: 50px; position: relative; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_login { width: 44px; height: 44px; background: url("../../src/css/images/right-myCenter.png") no-repeat -10px -85px; position: absolute; top: 0; right: 0; cursor: pointer; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main { width: 100%; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .erwei_img { box-sizing: border-box; width: 100%; height: 170px; text-align: center; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .erwei_img img { display: inline-block; height: 100%; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .shaoyishao { box-sizing: border-box; width: 240px; height: 50px; margin-top: 20px; margin-left: 40px; position: relative; padding-left: 80px; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .shaoyishao .sys { width: 35px; height: 35px; background: url("../../src/css/images/right-myCenter.png") no-repeat -75px 0; position: absolute; left: 10px; top: 0; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .shaoyishao p { font-size: 12px; line-height: 16px; color: #222; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .shaoyishao p span { color: #f00; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .wx_login_other { padding-top: 26px; font-size: 12px; color: #aaa; padding-left: 50px; width: 150px; }
+
+.right-cont .myCenter .myCenter_main_wx .wx_main .wx_login_other a { display: inline-block; float: right; color: #aaa; }
+
+.right-cont .myCenter .myCenter_main { display: none; width: 100%; height: 400px; padding-top: 10px; position: relative; }
+
+.right-cont .myCenter .myCenter_main .myCenter_logo { width: 44px; height: 44px; background: url("../../src/css/images/right-myCenter.png") no-repeat -81px -85px; position: absolute; top: 0; right: 0; cursor: pointer; }
+
+.right-cont .myCenter .myCenter_main form { margin-left: 60px; }
+
+.right-cont .myCenter .myCenter_main form .myCenter_cont { margin-top: 20px; box-sizing: border-box; width: 200px; height: 32px; border: 1px solid #ccc; border-radius: 4px; padding-left: 36px; }
+
+.right-cont .myCenter .myCenter_main form .myCenter_cont input { display: block; box-sizing: border-box; width: 100%; height: 100%; border: 1px solid transparent; border-radius: 0 4px 4px 0; }
+
+.right-cont .myCenter .myCenter_main form .loginCg { width: 62px; height: 62px; background: url("../../src/css/images/right-myCenter.png") no-repeat 0 0; margin-left: 70px; }
+
+.right-cont .myCenter .myCenter_main form .na { background: url("../../src/css/images/xb-zh.jpg") no-repeat 0 0; }
+
+.right-cont .myCenter .myCenter_main form .pw { background: url("../../src/css/images/xb-mm.jpg") no-repeat 0 0; }
+
+.right-cont .myCenter .myCenter_main form .ca { border: 0; padding: 0; }
+
+.right-cont .myCenter .myCenter_main form .ca .result { border: 1px solid #ccc; box-sizing: border-box; height: 100%; width: 80px; border-radius: 4px; float: left; padding: 10px; }
+
+.right-cont .myCenter .myCenter_main form .ca .equation { border: 1px solid #ccc; box-sizing: border-box; height: 100%; width: 100px; border-radius: 4px; float: right; font: 22px/32px 'arial'; color: #ff6600; }
+
+.right-cont .myCenter .myCenter_main form .re { border: 0; padding: 0; font-size: 14px; line-height: 32px; color: #bbb; }
+
+.right-cont .myCenter .myCenter_main form .re .check_pwd { display: inline-block; width: 14px; height: 14px; margin-right: 10px; vertical-align: middle; }
+
+.right-cont .myCenter .myCenter_main form .su { border: 0; padding: 0; }
+
+.right-cont .myCenter .myCenter_main form .su .sub { background-color: #C81417; border-radius: 4px; color: #fff; }
+
+.right-cont .myCenter .myCenter_main form .su .sub:hover { background-color: #9a0f12; }
+
+.myCenter_main .myCenter_other { font-size: 12px; margin-left: 60px; width: 200px; line-height: 8; }
+
+.myCenter_main .myCenter_other a { color: #bbb; }
+
+.myCenter_main .myCenter_other .zhuce { display: block; float: right; }
