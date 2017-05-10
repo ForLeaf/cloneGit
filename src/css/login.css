@@ -10,18 +10,6 @@ input { outline: none; }
 
 .clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
 
-* { margin: 0; padding: 0; }
-
-ul, li { list-style: none; }
-
-a { text-decoration: none; }
-
-img { display: block; border: 0; }
-
-input { outline: none; }
-
-.clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
-
 .container { width: 1200px; margin: 0 auto; }
 
 .foot { border-top: 1px solid #333; }
@@ -96,7 +84,21 @@ input { outline: none; }
 
 .foot .bottomlist .authentication a { display: inline-block; box-sizing: border-box; height: 44px; width: 98px; }
 
+* { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+img { display: block; border: 0; }
+
+input { outline: none; }
+
+.clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+
 .container { width: 1200px; margin: 0 auto; }
+
+.foot { border: 0; }
 
 .login_header { height: 120px; }
 
@@ -126,34 +128,96 @@ input { outline: none; }
 
 .login_main .container .bigImg { float: left; }
 
-.login_main .container .form_right { box-sizing: border-box; width: 350px; height: 500px; position: absolute; right: 0; top: 30px; border: 1px solid #ccc; box-shadow: 0 0 10px 2px #ccc; }
+.login_main .container .form_right { box-sizing: border-box; width: 340px; position: absolute; right: 0; top: 30px; border: 1px solid #ccc; box-shadow: 0 0 10px 2px #ccc; font-size: 12px; }
 
-.login_main .container .form_right .form_top { height: 50px; width: 100%; border-bottom: 1px solid #eee; font: 12px/50px 'arial'; background: #f5f5f5; }
+.login_main .container .form_right .res_btn { position: absolute; left: 20px; top: 20px; z-index: 10; }
 
-.login_main .container .form_right .form_top span { margin-left: 20px; color: #333; }
+.login_main .container .form_right .res_btn a { color: #ff6600; }
 
-.login_main .container .form_right .form_top a { margin-right: 15px; float: right; color: #ff6600; }
+.login_main .container .form_right .main_login_shadow { box-sizing: border-box; width: 100%; position: relative; padding: 50px; padding-bottom: 0; text-align: center; }
 
-.login_main .container .form_right .login_form { width: 300px; padding: 20px 0; margin: 0 25px; }
+.login_main .container .form_right .main_login_shadow .pc_btn { width: 60px; height: 60px; position: absolute; right: 10px; top: 10px; background: url("../../src/css/images/right-myCenter.png") no-repeat -80px -84px; cursor: pointer; }
 
-.login_main .container .form_right .login_form .login_form_text { width: 100%; height: 37px; font: 12px/37px 'arial'; }
+.login_main .container .form_right .main_login_shadow .erweima { display: inline-block; width: 170px; height: 170px; }
 
-.login_main .container .form_right .login_form .login_form_text label { display: inline-block; box-sizing: border-box; width: 60px; height: 35px; text-align: left; vertical-align: top; }
+.login_main .container .form_right .main_login_shadow .erweima img { width: 100%; }
 
-.login_main .container .form_right .login_form .login_form_text div { display: inline-block; box-sizing: border-box; width: 227px; height: 37px; border: 1px solid #ccc; border-radius: 4px; position: relative; }
+.login_main .container .form_right .main_login_shadow .sys { box-sizing: border-box; width: 240px; height: 50px; position: relative; padding-left: 70px; padding-top: 10px; text-align: left; }
 
-.login_main .container .form_right .login_form .login_form_text div input { box-sizing: border-box; width: 100%; height: 100%; padding: 0 40px 0 20px; border: 1px solid transparent; border-radius: 4px; }
+.login_main .container .form_right .main_login_shadow .sys .shao { display: block; float: left; width: 37px; height: 37px; background: url("../../src/css/images/right-myCenter.png") no-repeat -73px 0; position: absolute; left: 10px; top: 10px; }
 
-.login_main .container .form_right .login_form .login_form_text div em { display: block; width: 40px; height: 40px; position: absolute; right: 0; top: -2px; }
+.login_main .container .form_right .main_login_shadow .sys p { color: #aaa; }
 
-.login_main .container .form_right .login_form .login_form_text div .xm { background: url("../../src/css/images/icon_sign_up_page_system.png") no-repeat 0 0; }
+.login_main .container .form_right .main_login_shadow .sys p span { color: #f00; }
 
-.login_main .container .form_right .login_form .login_form_text div .mm { background: url("../../src/css/images/icon_sign_up_key.png") no-repeat 0 0; }
+.login_main .container .form_right .main_login_shadow .qw { margin-top: 40px; margin-bottom: 10px; width: 240px; color: #aaa; text-align: center; }
 
-.login_main .container .form_right .login_form .login_form_text #yanzhengma { box-sizing: border-box; width: 142px; height: 36px; border: 1px solid #ccc; border-radius: 4px; padding-left: 12px; vertical-align: top; }
+.login_main .container .form_right .main_login_shadow .qw p { margin-bottom: 10px; }
 
-.login_main .container .form_right .login_form .login_form_text #duanxin { box-sizing: border-box; width: 142px; height: 36px; border: 1px solid #ccc; border-radius: 4px; padding-left: 12px; vertical-align: top; }
+.login_main .container .form_right .main_login_shadow .qw div { width: 85px; height: 55px; }
 
-.login_main .container .form_right .login_form .login_form_text .verCode, .login_main .container .form_right .login_form .login_form_text .noteCode { box-sizing: border-box; width: 92px; height: 36px; border-radius: 4px; background-color: #eee; }
+.login_main .container .form_right .main_login_shadow .qw div i { display: inline-block; width: 30px; height: 30px; }
 
-.login_main .container .form_right .login_form .login_form_msg { width: 100%; height: 30px; font: 12px/30px 'arial'; }
+.login_main .container .form_right .main_login_shadow .qw .qq { display: inline-block; }
+
+.login_main .container .form_right .main_login_shadow .qw .qq .qq_img { background: url("../../src/css/images/login-box.png") no-repeat 0 -180px; }
+
+.login_main .container .form_right .main_login_shadow .qw .qq a { color: #aaa; }
+
+.login_main .container .form_right .main_login_shadow .qw .weixin { display: inline-block; }
+
+.login_main .container .form_right .main_login_shadow .qw .weixin .weixin_img { background: url("../../src/css/images/login-box.png") no-repeat 0 -224px; }
+
+.login_main .container .form_right .main_login_shadow .qw .weixin a { color: #aaa; }
+
+.login_main .container .form_right .main_login { box-sizing: border-box; width: 100%; position: relative; padding: 50px; padding-bottom: 0; }
+
+.login_main .container .form_right .main_login .erwei_btn { width: 60px; height: 60px; position: absolute; right: 10px; top: 10px; background: url("../../src/css/images/right-myCenter.png") no-repeat -80px -84px; cursor: pointer; }
+
+.login_main .container .form_right .main_login .same_name_text { width: 240px; height: 40px; border: 1px solid #ccc; border-radius: 6px; }
+
+.login_main .container .form_right .main_login .same_name_text input { box-sizing: border-box; width: 100%; height: 100%; border: 1px solid transparent; border-radius: 6px; padding-left: 60px; }
+
+.login_main .container .form_right .main_login .same_name_text #usrname { background: url("../../src/css/images/icon_sign_up_page_system.png") no-repeat 0 0; }
+
+.login_main .container .form_right .main_login .same_name_text #pwd { background: url("../../src/css/images/icon_sign_up_key.png") no-repeat 0 0; }
+
+.login_main .container .form_right .main_login .xm { border: 0; }
+
+.login_main .container .form_right .main_login .xm .res { box-sizing: border-box; height: 100%; width: 100px; padding-left: 16px; border: 1px solid #ccc; }
+
+.login_main .container .form_right .main_login .xm .cal { box-sizing: border-box; background-color: #ddd; border-radius: 4px; width: 100px; height: 100%; font: italic 18px/40px 'arial'; color: #ff6600; text-align: center; float: right; cursor: pointer; }
+
+.login_main .container .form_right .main_login .same_name_msg { width: 240px; height: 30px; font: 12px/30px 'arial'; }
+
+.login_main .container .form_right .main_login .xx { box-sizing: border-box; color: #aaa; }
+
+.login_main .container .form_right .main_login .xx input { margin-right: 10px; vertical-align: baseline; }
+
+.login_main .container .form_right .main_login .xx a { color: #aaa; float: right; }
+
+.login_main .container .form_right .main_login .sm { box-sizing: border-box; width: 240px; height: 40px; border: 0; }
+
+.login_main .container .form_right .main_login .sm .sub { width: 100%; height: 100%; border: 0; border-radius: 6px; background-color: #C81417; color: #fff; cursor: pointer; }
+
+.login_main .container .form_right .main_login .sm .sub:hover { background-color: #9a0f12; }
+
+.login_main .container .form_right .main_login .qw { margin-top: 40px; margin-bottom: 10px; width: 240px; color: #aaa; text-align: center; }
+
+.login_main .container .form_right .main_login .qw p { margin-bottom: 10px; }
+
+.login_main .container .form_right .main_login .qw div { width: 85px; height: 55px; }
+
+.login_main .container .form_right .main_login .qw div i { display: inline-block; width: 30px; height: 30px; }
+
+.login_main .container .form_right .main_login .qw .qq { display: inline-block; }
+
+.login_main .container .form_right .main_login .qw .qq .qq_img { background: url("../../src/css/images/login-box.png") no-repeat 0 -180px; }
+
+.login_main .container .form_right .main_login .qw .qq a { color: #aaa; }
+
+.login_main .container .form_right .main_login .qw .weixin { display: inline-block; }
+
+.login_main .container .form_right .main_login .qw .weixin .weixin_img { background: url("../../src/css/images/login-box.png") no-repeat 0 -224px; }
+
+.login_main .container .form_right .main_login .qw .weixin a { color: #aaa; }

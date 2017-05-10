@@ -10,7 +10,6 @@
     <script src="../js/require.js" data-main="../js/login.js"></script>
 </head>
 <body>
-
     <div class="login_header">
         <div class="container">
             <div class="logo">
@@ -38,60 +37,80 @@
     <div class="login_main">
         <div class="container">
             <div class="bigImg">
-                <a href="#"><img src="../../src/img/login_bigimg.jpg" alt=""></a>
+                <a href="#"><img src="../../src/img/loginImg.jpg" alt=""></a>
             </div>
             <div class="form_right">
-                <div class="form_top">
-                    <span>注册华盛奥莱会员</span>
-                    <a href="#">已有账户，登录</a>
+                <div class="res_btn">
+                    <a href="#">立即注册</a>
                 </div>
-                <div class="login_form">
-                    <div class="login_form_text">
-                        <label for="username">注册账号</label>
-                        <div>
-                            <input type="text" id="username" name="username" placeholder="请输入手机号码">
-                            <em class="xm"></em>
+                <div class="main_login">
+                    <div class="erwei_btn"></div>
+                    <div class="same_name_text">
+                        <input type="text" id="usrname" name="username" placeholder="请输入用户名">
+                    </div>
+                    <div class="same_name_msg"></div>
+                    <div class="same_name_text">
+                        <input type="password" id="pwd" name="pwd" placeholder="请输入密码">
+                    </div>
+                    <div class="same_name_msg"></div>
+                    <div class="same_name_text xm">
+                        <input type="text" class="res" placeholder="计算结果">
+                        <div class="cal"></div>
+                    </div>
+                    <div class="same_name_msg xm"></div>
+                    <div class="same_name_msg xx">
+                        <input type="checkbox">
+                        <span>记住密码</span>
+                        <a href="#">忘记密码？</a>
+                    </div>
+                    <div class="same_name_msg sm">
+                        <input type="submit" class="sub">
+                    </div>
+                    <div class="qw">
+                        <p>无需注册，直接登录</p>
+                        <div class="qq">
+                            <a href="#">
+                                <i class="qq_img"></i>
+                                <p>QQ登录</p>
+                            </a>
                         </div>
-
-                    </div>
-                    <div class="login_form_msg"></div>
-                    <div class="login_form_text">
-                        <label for="pwd1">输入密码</label>
-                        <div>
-                            <input type="password" id="pwd1" name="pwd1" placeholder="请输入密码">
-                            <em class="mm"></em>
+                        <div class="weixin">
+                            <a href="#">
+                                <i class="weixin_img"></i>
+                                <p>微信登录</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="login_form_msg"></div>
-                    <div class="login_form_text">
-                        <label for="pwd2">确认密码</label>
-                        <div>
-                            <input type="password" id="pwd2" name="pwd2" placeholder="请输入密码">
-                            <em class="mm"></em>
+                </div>
+                <div class="main_login_shadow" style="display: none;">
+                    <div class="pc_btn"></div>
+                    <div class="erweima">
+                        <img src="../../src/img/qrcode.jpg" alt="">
+                    </div>
+                    <div class="sys">
+                        <span class="shao"></span>
+                        <p>打开 <span>最新版</span>手机奥莱购</p>
+                        <p>扫一扫登录</p>
+                    </div>
+                    <div class="qw">
+                        <p>无需注册，直接登录</p>
+                        <div class="qq">
+                            <a href="#">
+                                <i class="qq_img"></i>
+                                <p>QQ登录</p>
+                            </a>
+                        </div>
+                        <div class="weixin">
+                            <a href="#">
+                                <i class="weixin_img"></i>
+                                <p>微信登录</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="login_form_msg"></div>
-                    <div class="login_form_text">
-                        <label for="yanzhengma">验证码</label>
-                        <input type="text" id="yanzhengma" name="yanzhengma" placeholder="请输入验证码">
-                        <div class="verCode"></div>
-                    </div>
-                    <div class="login_form_msg"></div>
-                    <div class="login_form_text">
-                        <label for="duanxin">短信验证</label>
-                        <input type="text" id="duanxin" name="duanxin" placeholder="请输入验证码">
-                        <div class="noteCode"></div>
-                    </div>
-                    <div class="login_form_msg"></div>
-                    <div class="login_form_text"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="login_footer">
-        <div class="container">
-
-        </div>
-    </div>
+    <div class="foot"></div>
 </body>
 </html>
