@@ -6,7 +6,8 @@ require.config({
         "gdszoom":"../lib/jquery-gdszoom/jquery.gdszoom",
         "slideshow":"../lib/juqey-slideshow/jquery-slideshow",
         "jquery-ui":"../lib/jquery-ui-1.12.1.custom/jquery-ui",
-        "jquery-lazyload":"../lib/jquery-lazyload"
+        "lazyload":"../lib/jquery.lazyload.min",
+        "jqfly" : "../lib/jquery.fly.min"
     },
 
 
@@ -15,6 +16,8 @@ require.config({
         "gdszoom":["jquery"],
         "slideshow":["jquery"],
         "jquery-ui":["jquery"],
-        "jquery-lazyload":["jquery"]
+        "lazyload" : ["jquery"],
+        "jqfly" : ["jquery"],
+        "side_cart" : ["jquery"]
     }
 })

@@ -40,6 +40,7 @@
 			box-shadow: 0 0 1px 1px #ccc;
 			width: 110px;
 			position: absolute;
+			top:32px;
 		  	z-index: 22;
 			display: none;
 			//top:6px;
@@ -76,6 +77,18 @@
 			li{
 				float: left;
 				margin-left:30px;
+			}
+			.li_login{
+				.user{
+					color:#C81417;
+					display: none;
+				}
+			}
+			.li_reg{
+				.quit{
+					color: #C81417;
+					display: none;
+				}
 			}
 			.shopping_car{
 				color:#C81417;
@@ -176,6 +189,7 @@
 			left: 0;
 			width: 100%;
 			height: 45px;
+			border-bottom: 1px solid #eee;
 			.head_select{
 			  position: relative;
 			  	.select_tit{
@@ -199,13 +213,14 @@
 			  }
 			}
 		  .select_cont{
-			display: none;
+			  position: absolute;
+			  left:0;
+			  top:45px;
 			width: 210px;
 			height: 460px;
 			box-sizing: border-box;
 			border:1px solid transparent;
 			box-shadow: 0 0 12px 2px #ccc;
-			padding:0 12px;
 			a{
 			  font-size: 14px;
 			  color:#7e7e7e;
@@ -215,8 +230,11 @@
 			  color:#7e7e7e;
 			}
 			li{
+
+				box-sizing: border-box;
 			  height: 50px;
-			  width: 100%;
+			  width: 210px;
+				padding:0 12px;
 			  line-height: 50px;
 			  .bcate{
 				display: inline-block;
@@ -242,34 +260,51 @@
 				  color:#f0ad4e;
 				}
 				>.books{
-				  display: block;
+					display: block;
+					top:0;
 				}
+				  >.dbs{
+					  opacity:1;
+					  left:210px;
+				  }
 			  }
 			}
 			.select_bar{
 			  position: relative;
 			}
+			  /*.books.dbs{
+				  transition: all .5s;
+				  opacity:0;
+				  top:0;
+				  left:250px;
+			  }*/
 			.books{
-			  display: none;
+				transition:all .5s;
+				display: none;
 			  position: absolute;
-			  left:180px;
-			  top: 0;
+				z-index: 9999;
+			  left:200px;
+			  top: 80px;
 			  box-sizing: border-box;
 			  height: 460px;
-			  width: 750px;
+			  width: 760px;
 			  border:1px solid #ccc;
 			  border-left:0;
 			  border-radius: 0 10px 10px 0;
-			  padding:20px;
-			  padding-left:40px;
-			  padding-bottom: 0;
+			  padding-left:16px;
+			  padding-top: 24px;
 				.books-top{
 				  margin-left:10px;
 				  margin-bottom:10px;
+
 				  >dl{
-					width: 300px;
+					  box-sizing: border-box;
+					width: 346px;
+					  padding-left:10px;
+					  margin-right: 20px;
+					  margin-bottom: 15px;
 					float: right;
-					height: 80px;
+					height: 75px;
 					&.clear-left{
 					  float: left;
 					}
@@ -279,35 +314,64 @@
 					  text-decoration: underline;
 					}
 					>dt{
-					  height: 40px;
-					  line-height: 40px;
+					  box-sizing: border-box;
+						width: 300px;
+						height: 27px;
+						line-height:27px;
+						font-family: '微软雅黑';
 					  a{
-						font-size: 16px;
+						font-size: 14px;
+						  line-height:14px;
+						  font-weight: normal;
+						  color:#333;
 					  }
 					  border-bottom:1px solid #ccc;
 					}
 					>dd{
 					  display: inline-block;
-					  margin-top: 0px;
-					  height: 40px;
-					  line-height: 40px;
+						box-sizing: border-box;
+						height: 24px;
+						padding-top:10px;
+						line-height:14px;
+						font:normal 14px/14px 'arial';
+						float: left;
 					  a{
-						margin:0 3px;
-						font-size: 14px;
+						display: inline-block;
+						  padding:0 10px;
+						  border-right:1px solid #ccc;
+						font-size: 12px;
 						line-height: 14px;
+						  color:#888;
+						  font-weight: normal;
 					  }
 					}
 				  }
 
 				}
 			  .books-down{
-				margin-top:20px;
-				border-top:1px solid #ccc;
-				border-left:1px solid #ccc;
+				  float: right;
+				  box-sizing: border-box;
+				  width: 750px;
+				  height: 90px;
+				  padding:7px 0;
+				  padding-left: 20px;
+					dl{
+						box-sizing: border-box;
+						width: 721px;
+						border-left:1px solid #ccc;
+						border-top: 1px solid #ccc;
+					}
 				dd{
 				  float: left;
+					width: 120px;
+					height: 76px;
+					box-sizing: border-box;
 				  border-right: 1px solid #ccc;
 				  border-bottom:1px solid #ccc;
+					img{
+						height: 75px;
+						width: 119px;
+					}
 				}
 			  }
 			}
@@ -321,7 +385,9 @@
 	float: left;
   }
   .select_ul{
-	float: left;
+	  position: absolute;
+	  left:150px;
+	  top:0;
 	height: 44px;
 	line-height: 44px;
 	li{

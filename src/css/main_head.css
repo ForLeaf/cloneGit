@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * { margin: 0; padding: 0; }
 
 ul, li { list-style: none; }
@@ -28,7 +29,7 @@ input { outline: none; }
 
 .head-bar .cont .head-bar-center:hover .head-bar-left-box { display: block; }
 
-.head-bar .cont .head-bar-left-box { line-height: 3; padding: 0 24px; border: 1px solid #ccc; background-color: #fff; box-shadow: 0 0 1px 1px #ccc; width: 110px; position: absolute; z-index: 22; display: none; }
+.head-bar .cont .head-bar-left-box { line-height: 3; padding: 0 24px; border: 1px solid #ccc; background-color: #fff; box-shadow: 0 0 1px 1px #ccc; width: 110px; position: absolute; top: 32px; z-index: 22; display: none; }
 
 .head-bar .cont .head-bar-left-box:before { content: ''; display: block; width: 0; height: 0; border: 10px solid transparent; border-bottom: 10px solid #ccc; position: absolute; top: -20px; left: 14px; }
 
@@ -39,6 +40,10 @@ input { outline: none; }
 .head-bar .cont .head-bar-right { float: right; font-size: 12px; color: #7e7e7e; }
 
 .head-bar .cont .head-bar-right li { float: left; margin-left: 30px; }
+
+.head-bar .cont .head-bar-right .li_login .user { color: #C81417; display: none; }
+
+.head-bar .cont .head-bar-right .li_reg .quit { color: #C81417; display: none; }
 
 .head-bar .cont .head-bar-right .shopping_car { color: #C81417; }
 
@@ -78,7 +83,7 @@ input { outline: none; }
 
 .head_main .container .head_main_erweima { position: absolute; right: 0; top: 0; }
 
-.head_main .container .head_nav { position: absolute; bottom: 0; left: 0; width: 100%; height: 45px; }
+.head_main .container .head_nav { position: absolute; bottom: 0; left: 0; width: 100%; height: 45px; border-bottom: 1px solid #eee; }
 
 .head_main .container .head_nav .head_select { position: relative; }
 
@@ -86,13 +91,13 @@ input { outline: none; }
 
 .head_main .container .head_nav .head_select .select_tri { width: 0; height: 0; border: 6px solid transparent; border-top: 6px solid #fff; position: absolute; left: 160px; top: 20px; }
 
-.head_main .container .head_nav .select_cont { display: none; width: 210px; height: 460px; box-sizing: border-box; border: 1px solid transparent; box-shadow: 0 0 12px 2px #ccc; padding: 0 12px; }
+.head_main .container .head_nav .select_cont { position: absolute; left: 0; top: 45px; width: 210px; height: 460px; box-sizing: border-box; border: 1px solid transparent; box-shadow: 0 0 12px 2px #ccc; /*.books.dbs{ transition: all .5s; opacity:0; top:0; left:250px; }*/ }
 
 .head_main .container .head_nav .select_cont a { font-size: 14px; color: #7e7e7e; }
 
 .head_main .container .head_nav .select_cont span { font-size: 14px; color: #7e7e7e; }
 
-.head_main .container .head_nav .select_cont li { height: 50px; width: 100%; line-height: 50px; }
+.head_main .container .head_nav .select_cont li { box-sizing: border-box; height: 50px; width: 210px; padding: 0 12px; line-height: 50px; }
 
 .head_main .container .head_nav .select_cont li .bcate { display: inline-block; width: 50px; }
 
@@ -104,35 +109,41 @@ input { outline: none; }
 
 .head_main .container .head_nav .select_cont li:hover .scate > a, .head_main .container .head_nav .select_cont li:hover .bcate > a { color: #f0ad4e; }
 
-.head_main .container .head_nav .select_cont li:hover > .books { display: block; }
+.head_main .container .head_nav .select_cont li:hover > .books { display: block; top: 0; }
+
+.head_main .container .head_nav .select_cont li:hover > .dbs { opacity: 1; left: 210px; }
 
 .head_main .container .head_nav .select_cont .select_bar { position: relative; }
 
-.head_main .container .head_nav .select_cont .books { display: none; position: absolute; left: 180px; top: 0; box-sizing: border-box; height: 460px; width: 750px; border: 1px solid #ccc; border-left: 0; border-radius: 0 10px 10px 0; padding: 20px; padding-left: 40px; padding-bottom: 0; }
+.head_main .container .head_nav .select_cont .books { transition: all .5s; display: none; position: absolute; z-index: 9999; left: 200px; top: 80px; box-sizing: border-box; height: 460px; width: 760px; border: 1px solid #ccc; border-left: 0; border-radius: 0 10px 10px 0; padding-left: 16px; padding-top: 24px; }
 
 .head_main .container .head_nav .select_cont .books .books-top { margin-left: 10px; margin-bottom: 10px; }
 
-.head_main .container .head_nav .select_cont .books .books-top > dl { width: 300px; float: right; height: 80px; }
+.head_main .container .head_nav .select_cont .books .books-top > dl { box-sizing: border-box; width: 346px; padding-left: 10px; margin-right: 20px; margin-bottom: 15px; float: right; height: 75px; }
 
 .head_main .container .head_nav .select_cont .books .books-top > dl.clear-left { float: left; }
 
 .head_main .container .head_nav .select_cont .books .books-top > dl a:hover { color: #f0ad4e; font-weight: bold; text-decoration: underline; }
 
-.head_main .container .head_nav .select_cont .books .books-top > dl > dt { height: 40px; line-height: 40px; border-bottom: 1px solid #ccc; }
+.head_main .container .head_nav .select_cont .books .books-top > dl > dt { box-sizing: border-box; width: 300px; height: 27px; line-height: 27px; font-family: '微软雅黑'; border-bottom: 1px solid #ccc; }
 
-.head_main .container .head_nav .select_cont .books .books-top > dl > dt a { font-size: 16px; }
+.head_main .container .head_nav .select_cont .books .books-top > dl > dt a { font-size: 14px; line-height: 14px; font-weight: normal; color: #333; }
 
-.head_main .container .head_nav .select_cont .books .books-top > dl > dd { display: inline-block; margin-top: 0px; height: 40px; line-height: 40px; }
+.head_main .container .head_nav .select_cont .books .books-top > dl > dd { display: inline-block; box-sizing: border-box; height: 24px; padding-top: 10px; line-height: 14px; font: normal 14px/14px 'arial'; float: left; }
 
-.head_main .container .head_nav .select_cont .books .books-top > dl > dd a { margin: 0 3px; font-size: 14px; line-height: 14px; }
+.head_main .container .head_nav .select_cont .books .books-top > dl > dd a { display: inline-block; padding: 0 10px; border-right: 1px solid #ccc; font-size: 12px; line-height: 14px; color: #888; font-weight: normal; }
 
-.head_main .container .head_nav .select_cont .books .books-down { margin-top: 20px; border-top: 1px solid #ccc; border-left: 1px solid #ccc; }
+.head_main .container .head_nav .select_cont .books .books-down { float: right; box-sizing: border-box; width: 750px; height: 90px; padding: 7px 0; padding-left: 20px; }
 
-.head_main .container .head_nav .select_cont .books .books-down dd { float: left; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.head_main .container .head_nav .select_cont .books .books-down dl { box-sizing: border-box; width: 721px; border-left: 1px solid #ccc; border-top: 1px solid #ccc; }
+
+.head_main .container .head_nav .select_cont .books .books-down dd { float: left; width: 120px; height: 76px; box-sizing: border-box; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+
+.head_main .container .head_nav .select_cont .books .books-down dd img { height: 75px; width: 119px; }
 
 .head_select .select_tit { float: left; }
 
-.head_select .select_ul { float: left; height: 44px; line-height: 44px; }
+.head_select .select_ul { position: absolute; left: 150px; top: 0; height: 44px; line-height: 44px; }
 
 .head_select .select_ul li { float: left; }
 

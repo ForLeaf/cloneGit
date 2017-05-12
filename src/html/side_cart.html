@@ -5,7 +5,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/side_cart.css"/>
     <link rel="stylesheet" href="../font/iconfont.css">
-    <script src="../js/require.js" data-main="side_cart.js"></script>
+    <script src="../js/require.js" data-main="../js/side_cart.js"></script>
 
 </head>
 <body>
@@ -42,8 +42,10 @@
             </li>
         </ul>
         <div class="right-cont">
-            <div class="right-cont-item myCenter">
-                <div class="myCenter_top"><span class="myCenter_closebtn">&times;</span></div>
+            <div class="right-cont-item myCenter" style="display: none;">
+                <div class="myCart_top">
+                    <span class="closebtn">&times;</span>
+                </div>
                 <div class="myCenter_main">
                     <div class="myCenter_logo"></div>
                     <form action="#" method="post">
@@ -71,7 +73,7 @@
                         <a href="#" class="zhuce">注册账号</a>
                     </div>
                 </div>
-                <div class="myCenter_main_wx">
+                <div class="myCenter_main_wx" style="display: none;">
                     <div class="wx_login"></div>
                     <div class="wx_main">
                         <div class="erwei_img">
@@ -90,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-cont-item myCart">
+            <div class="right-cont-item myCart" style="display: block;">
                 <div class="myCart_top">
                     <div>
                         <input type="checkbox" class="checkall">
@@ -102,7 +104,7 @@
                 <div class="cartlist">
                     <div class="goods">
                         <div class="check">
-                            <input type="checkbox">
+                            <input type="checkbox" class="goods_check">
                         </div>
                         <div class="goods_img">
                             <img src="" alt="">
@@ -112,8 +114,26 @@
                             <p class="goods_style">颜色：黑色   尺码：L</p>
                             <div class="price_msg">
                                 <span class="goods_price">159.00</span>
-                                <span class="sum">*1</span>
-                                <span class="discount">可优惠¥0.00</span>
+                                <span class="sum">1</span>
+                                <span class="discount">0.00</span>
+                            </div>
+                        </div>
+                        <span class="goods_closebtn">&times;</span>
+                    </div>
+                    <div class="goods">
+                        <div class="check">
+                            <input type="checkbox" class="goods_check">
+                        </div>
+                        <div class="goods_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="goods_msg">
+                            <p class="goods_tit">初语 字母印花侧面条纹哈伦风束脚卫衣裤 8644411609</p>
+                            <p class="goods_style">颜色：黑色   尺码：L</p>
+                            <div class="price_msg">
+                                <span class="goods_price">159.00</span>
+                                <span class="sum">1</span>
+                                <span class="discount">0.00</span>
                             </div>
                         </div>
                         <span class="goods_closebtn">&times;</span>

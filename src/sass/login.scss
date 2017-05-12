@@ -312,3 +312,16 @@
         }
     }
 }
+.login_error_msg{
+    box-sizing: border-box;
+    height: 40px;
+    font:16px/40px 'arial';
+    text-align: center;
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    padding:0 20px;
+    border-radius: 4px;
+    position: fixed;
+    display: none;
+
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #book{
+            width: 800px;
+            height: 200px;
+        }
+        #res{
+            width: 800px;
+            height: 200px;
+        }
+    </style>
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+
+            var num1=0,obj2={};
+            $('#btn').click(function () {
+                var text = $('#book').val();
+                //匹配dl内容
+                var reg = /<dl[^>]*?>.+?<\/dl>/g;
+                var res = text.match(reg);
+                //console.log(res)
+
+                //提取文字
+                var arr = new Array();
+                var obj={},obj1={},arr1=[],arr2=[],num=0;
+                var reg1 = /(?:<dt>.+<\/dt>)|(?:<dd>.+?<\/dd>)/g;
+                var reg2 = /<a[^>]+?>(.+)<\/a>/;
+                var reg3 = /<.*>/;
+                var reg4 = /\/([\w\-]+)\.[jpg|png]/;
+                for(var i = 0; i < res.length; i++){
+                    var res1 = res[i].match(reg1);
+                    //console.log(res1);
+                    for(var j = 0; j < res1.length; j++){
+                        var res2 = res1[j].match(reg2);
+                        if(reg3.test(res2[1])){
+                            console.log(res2[1]);
+                            var res3 = res2[1].match(reg4);
+                            console.log(res3);
+                            arr1.push(res3[1]);
+                        }else{
+                            arr.push(res2[1]);
+                        }
+                    }
+                    if(arr.length != 0){
+                        obj[i] = arr;
+                        arr = [];
+                    }
+                    if(arr1.length != 0){
+                        obj1[num++] = arr1;
+                        arr1 = [];
+                    }
+                }
+                arr2.push(obj);
+                arr2.push(obj1);
+                obj2[num1++] = arr2;
+                var res = JSON.stringify(obj2);
+                console.log(obj2);
+
+                $('#res').val(res);
+
+                //将数据传到reg.php
+                /*$.post('../../src/php/reg.php',{
+                    obj: res
+                }, function(response){
+                    var $obj = eval('(' + response + ')');
+                    if($obj.state){
+                        console.log('state:',$obj.state);
+                    } else {
+                        console.log('state:',$obj.state);
+                    }
+                })*/
+            })
+
+        })
+    </script>
+</head>
+<body>
+<textarea name="" id="book" cols="30" rows="10"></textarea>
+<button id="btn">提交</button>
+<textarea name="" id="res" cols="30" rows="10"></textarea>
+</body>
+</html>
