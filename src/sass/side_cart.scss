@@ -4,7 +4,7 @@
 .side_cart{
     position: fixed;
     right: -330px;
-    top:60px;
+    top:40px;
     width: 385px;
     height:600px;
     border:1px solid transparent;
@@ -219,6 +219,11 @@
             font:12px/1.4 'arial';
             padding-right:14px;
             padding-top:18px;
+            .goods_tit{
+                width: 196px;
+                height: 32px;
+                overflow: hidden;
+            }
             .goods_style{
                 margin-top: 4px;
                 color: #bbb;

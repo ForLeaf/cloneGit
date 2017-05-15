@@ -8,8 +8,8 @@
 			gap:15,
 
 			//放大区域的大小
-			width:400,
-			height:300
+			width:500,
+			height:400
 		}
 		// 遍历jquery对象
 		return this.each(function(){
@@ -53,8 +53,8 @@
 
             if(opt.position === 'right'){
             	$bigZoom.css({
-            		left:$smallPic.offset().left + $smallPic.outerWidth() + opt.gap,
-            		top:$smallPic.offset().top
+            		left:$smallPic.offset().left + $smallPic.outerWidth() + opt.gap - 15,
+            		top:$smallPic.offset().top + 205
             	});
             }else if(opt.position === 'left'){
             	$bigZoom.css({
@@ -87,7 +87,7 @@
             $zoom.on('mousemove',function(e){
             	 // 计算移动的距离
                 var left = e.clientX - $zoom.offset().left - $minZoom.outerWidth()/2;
-                var top = e.clientY - $zoom.offset().top - $minZoom.outerHeight()/2;
+                var top = e.clientY - $zoom.offset().top - $minZoom.outerHeight()/2 + window.scrollY;
 
                 // 放置移出小图之外的区域
                 if(left<0){

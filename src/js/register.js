@@ -1,5 +1,7 @@
 require(['config'],function(){
     // 这里不能保证jquery,gdszoom,common的加载顺序
+
+
     require(['jquery'],function($){
         $(function(){
             
@@ -153,7 +155,7 @@ require(['config'],function(){
                     }, function(response){
                         var $obj = eval('(' + response + ')');
                         if($obj.state){
-                            window.location.href = '../../src/index.html';
+                            window.location.href = '../html/login.html';
                         } else {
                             alert($obj.message);
                         }

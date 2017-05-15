@@ -4,11 +4,14 @@
 	width: 1200px;
 	margin:0 auto;
 }
+.head{
+
+}
 .cont{
 	width: 100%;
 }
 .head-bar{
-	height: 35px;
+	height: 37px;
 	background-color:#F0F0F0;
 	a{
 		font-size: 12px;
@@ -41,7 +44,7 @@
 			width: 110px;
 			position: absolute;
 			top:32px;
-		  	z-index: 22;
+		  	z-index: 1000;
 			display: none;
 			//top:6px;
 			&:before{
@@ -79,13 +82,14 @@
 				margin-left:30px;
 			}
 			.li_login{
-				.user{
+				#user{
 					color:#C81417;
 					display: none;
 				}
 			}
 			.li_reg{
-				.quit{
+				#quit{
+					cursor: pointer;
 					color: #C81417;
 					display: none;
 				}
@@ -213,9 +217,12 @@
 			  }
 			}
 		  .select_cont{
+			  display: none;
 			  position: absolute;
 			  left:0;
 			  top:45px;
+			  z-index: 999;
+			  background-color: #fff;
 			width: 210px;
 			height: 460px;
 			box-sizing: border-box;
@@ -259,14 +266,14 @@
 				.scate>a,.bcate>a{
 				  color:#f0ad4e;
 				}
-				>.books{
+				/*>.books{
 					display: block;
 					top:0;
 				}
 				  >.dbs{
 					  opacity:1;
 					  left:210px;
-				  }
+				  }*/
 			  }
 			}
 			.select_bar{
@@ -279,10 +286,10 @@
 				  left:250px;
 			  }*/
 			.books{
+				opacity:0;
 				transition:all .5s;
-				display: none;
 			  position: absolute;
-				z-index: 9999;
+				background-color: #fff;
 			  left:200px;
 			  top: 80px;
 			  box-sizing: border-box;
@@ -416,4 +423,64 @@
 	}
   }
 }
+#selectall{
+	position: relative;
+	z-index: 99;
+	top:0;
+	left:0;
+	width: 210px;
+	float: left;
+	cursor: pointer;
+	.select_tit{
+		z-index: 95;
+	}
+	.select_cont{
+		z-index: 90;
+		.books{
+			left:210px;
+		}
+	}
 
+}
+.topline{
+	display: none;
+	background-color: #fff;
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 48px;
+	z-index: 10;
+
+}
+#fixedlist{
+	position: fixed;
+	z-index: 99;
+	top:3px;
+	left:0;
+	width: 210px;
+	float: left;
+	cursor: pointer;
+	.select_tit{
+		z-index: 95;
+	}
+	.select_cont{
+		z-index: 90;
+		.books{
+			left:210px;
+		}
+	}
+}
+#fixedsearch{
+	position: fixed;
+	top:5px;
+	left:445px;
+	z-index: 99;
+}
+#fixedCart{
+	position: fixed;
+	left:1110px;
+	top:5px;
+	z-index: 99;
+	margin-left: 25px;
+}

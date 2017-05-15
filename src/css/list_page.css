@@ -15,7 +15,7 @@ input { outline: none; }
 
 .cont { width: 100%; }
 
-.head-bar { height: 35px; background-color: #F0F0F0; }
+.head-bar { height: 37px; background-color: #F0F0F0; }
 
 .head-bar a { font-size: 12px; color: #7e7e7e; }
 
@@ -29,7 +29,7 @@ input { outline: none; }
 
 .head-bar .cont .head-bar-center:hover .head-bar-left-box { display: block; }
 
-.head-bar .cont .head-bar-left-box { line-height: 3; padding: 0 24px; border: 1px solid #ccc; background-color: #fff; box-shadow: 0 0 1px 1px #ccc; width: 110px; position: absolute; top: 32px; z-index: 22; display: none; }
+.head-bar .cont .head-bar-left-box { line-height: 3; padding: 0 24px; border: 1px solid #ccc; background-color: #fff; box-shadow: 0 0 1px 1px #ccc; width: 110px; position: absolute; top: 32px; z-index: 1000; display: none; }
 
 .head-bar .cont .head-bar-left-box:before { content: ''; display: block; width: 0; height: 0; border: 10px solid transparent; border-bottom: 10px solid #ccc; position: absolute; top: -20px; left: 14px; }
 
@@ -41,9 +41,9 @@ input { outline: none; }
 
 .head-bar .cont .head-bar-right li { float: left; margin-left: 30px; }
 
-.head-bar .cont .head-bar-right .li_login .user { color: #C81417; display: none; }
+.head-bar .cont .head-bar-right .li_login #user { color: #C81417; display: none; }
 
-.head-bar .cont .head-bar-right .li_reg .quit { color: #C81417; display: none; }
+.head-bar .cont .head-bar-right .li_reg #quit { cursor: pointer; color: #C81417; display: none; }
 
 .head-bar .cont .head-bar-right .shopping_car { color: #C81417; }
 
@@ -91,7 +91,7 @@ input { outline: none; }
 
 .head_main .container .head_nav .head_select .select_tri { width: 0; height: 0; border: 6px solid transparent; border-top: 6px solid #fff; position: absolute; left: 160px; top: 20px; }
 
-.head_main .container .head_nav .select_cont { position: absolute; left: 0; top: 45px; width: 210px; height: 460px; box-sizing: border-box; border: 1px solid transparent; box-shadow: 0 0 12px 2px #ccc; /*.books.dbs{ transition: all .5s; opacity:0; top:0; left:250px; }*/ }
+.head_main .container .head_nav .select_cont { display: none; position: absolute; left: 0; top: 45px; z-index: 999; background-color: #fff; width: 210px; height: 460px; box-sizing: border-box; border: 1px solid transparent; box-shadow: 0 0 12px 2px #ccc; /*.books.dbs{ transition: all .5s; opacity:0; top:0; left:250px; }*/ }
 
 .head_main .container .head_nav .select_cont a { font-size: 14px; color: #7e7e7e; }
 
@@ -107,15 +107,13 @@ input { outline: none; }
 
 .head_main .container .head_nav .select_cont li a:hover { color: #f0ad4e; font-weight: bold; text-decoration: underline; }
 
+.head_main .container .head_nav .select_cont li:hover { /*>.books{ display: block; top:0; } >.dbs{ opacity:1; left:210px; }*/ }
+
 .head_main .container .head_nav .select_cont li:hover .scate > a, .head_main .container .head_nav .select_cont li:hover .bcate > a { color: #f0ad4e; }
-
-.head_main .container .head_nav .select_cont li:hover > .books { display: block; top: 0; }
-
-.head_main .container .head_nav .select_cont li:hover > .dbs { opacity: 1; left: 210px; }
 
 .head_main .container .head_nav .select_cont .select_bar { position: relative; }
 
-.head_main .container .head_nav .select_cont .books { transition: all .5s; display: none; position: absolute; z-index: 9999; left: 200px; top: 80px; box-sizing: border-box; height: 460px; width: 760px; border: 1px solid #ccc; border-left: 0; border-radius: 0 10px 10px 0; padding-left: 16px; padding-top: 24px; }
+.head_main .container .head_nav .select_cont .books { opacity: 0; transition: all .5s; position: absolute; background-color: #fff; left: 200px; top: 80px; box-sizing: border-box; height: 460px; width: 760px; border: 1px solid #ccc; border-left: 0; border-radius: 0 10px 10px 0; padding-left: 16px; padding-top: 24px; }
 
 .head_main .container .head_nav .select_cont .books .books-top { margin-left: 10px; margin-bottom: 10px; }
 
@@ -153,6 +151,28 @@ input { outline: none; }
 
 .head_select .select_ul li:nth-child(2) span { display: inline-block; font-size: 14px; height: 18px; line-height: 18px; padding: 2px; background-color: #C81417; color: #fff; border-radius: 4px; }
 
+#selectall { position: relative; z-index: 99; top: 0; left: 0; width: 210px; float: left; cursor: pointer; }
+
+#selectall .select_tit { z-index: 95; }
+
+#selectall .select_cont { z-index: 90; }
+
+#selectall .select_cont .books { left: 210px; }
+
+.topline { display: none; background-color: #fff; position: fixed; left: 0; top: 0; width: 100%; height: 48px; z-index: 10; }
+
+#fixedlist { position: fixed; z-index: 99; top: 3px; left: 0; width: 210px; float: left; cursor: pointer; }
+
+#fixedlist .select_tit { z-index: 95; }
+
+#fixedlist .select_cont { z-index: 90; }
+
+#fixedlist .select_cont .books { left: 210px; }
+
+#fixedsearch { position: fixed; top: 5px; left: 445px; z-index: 99; }
+
+#fixedCart { position: fixed; left: 1110px; top: 5px; z-index: 99; margin-left: 25px; }
+
 * { margin: 0; padding: 0; }
 
 ul, li { list-style: none; }
@@ -165,7 +185,7 @@ input { outline: none; }
 
 .clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
 
-.side_cart { position: fixed; right: -330px; top: 60px; width: 385px; height: 600px; border: 1px solid transparent; }
+.side_cart { position: fixed; right: -330px; top: 40px; width: 385px; height: 600px; border: 1px solid transparent; }
 
 .side_cart .right-cont { box-sizing: border-box; width: 329px; height: 600px; background-color: #fff; z-index: 22; position: absolute; right: 0; top: 0; border: 1px solid #ccc; }
 
@@ -222,6 +242,8 @@ input { outline: none; }
 .cartlist .goods .goods_img img { width: 100%; }
 
 .cartlist .goods .goods_msg { font: 12px/1.4 'arial'; padding-right: 14px; padding-top: 18px; }
+
+.cartlist .goods .goods_msg .goods_tit { width: 196px; height: 32px; overflow: hidden; }
 
 .cartlist .goods .goods_msg .goods_style { margin-top: 4px; color: #bbb; }
 
@@ -564,3 +586,5 @@ input { outline: none; }
 .down_area .container .side-pr { float: right; width: 1000px; height: 8294px; margin-left: 10px; overflow: hidden; }
 
 .down_area .container .side-pr img { margin-top: -18px; width: 800px; height: 8294px; }
+
+.u-flyer { display: block; width: 60px; height: 60px; border-radius: 50px; position: fixed; z-index: 9999; }

@@ -1,0 +1,526 @@
+@import "common";
+@import "reset";
+@import "main_head";
+@import "foot";
+@import "side_cart";
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.banner{
+    width: 100%;
+    height: 460px;
+    background-color: #eee;
+    .container{
+        height: 100%;
+        .ban_img{
+            height: 100%;
+            background-color: #f00;
+            .prev{
+                position: absolute;
+                top:230px;
+                margin-top: -37px;
+                left:0px;
+                cursor: pointer;
+                width: 40px;
+                height: 74px;
+                background: url("../css/images/focus_btn.png") no-repeat 0 -74px;
+            }
+            .next{
+                position: absolute;
+                width: 40px;
+                height: 74px;
+                top: 230px;
+                right:0;
+                margin-top: -37px;
+                cursor: pointer;
+                background: url("../css/images/focus_btn.png") no-repeat -40px -74px;
+            }
+        }
+    }
+}
+.sti01{
+    width: 100%;
+    height: 160px;
+    margin-top: 15px;
+    background-color: #eee;
+    .container{
+        height: 100%;
+
+    }
+    ul{
+        width: 100%;
+        height: 100%;
+        li{
+            float: left;
+            height: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            width: 290px;
+            margin-left: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.sti_til{
+    font:24px/75px '黑体','arial';
+    height: 75px;
+    background-color: transparent;
+}
+.sti02{
+    width: 100%;
+    background-color: #eee;
+    .container{
+
+        .sti2_main{
+            height: 510px;
+            background-color: #fff;
+            border-radius: 8px;
+            .bar{
+                box-sizing: border-box;
+                width: 100%;
+                height: 70px;
+                font:20px/70px 'arial';
+                color:#C81417;
+                span{
+                    display: inline-block;
+                    vertical-align: baseline;
+                    height: 35px;
+                    margin: 0 2px;
+                    line-height: 35px;
+                    text-align: center;
+                }
+                .til{
+                    margin: 0 20px;
+                }
+                .hour,.min,.sec{
+                    width: 35px;
+                    border-radius: 6px;
+                    background: #C81417;
+                    color: #fff;
+                }
+            }
+            .content{
+                .fl{
+                    float: left;
+                }
+                .bimg{
+                    width: 270px;
+                    height: 440px;
+                    border-radius: 8px 0 0 8px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                    }
+                }
+                .con_right{
+                    box-sizing: border-box;
+                    width: 930px;
+                    height: 440px;
+                    li{
+                        width: 232px;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
+.sti03{
+    width: 100%;
+    background-color: #eee;
+    .container{
+        .content{
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            >div{
+                width: 232px;
+                height: 350px;
+                overflow: hidden;
+                margin-left: 7px;
+                float: left;
+                position: relative;
+                .shadow{
+                    width: 232px;
+                    height: 350px;
+                    position: absolute;
+                    top:0;
+                    left:-232px;
+                    background-color: rgba(0,0,0,.3);
+                    overflow: hidden;
+                    cursor: pointer;
+                    text-align: center;
+                    color: #fff;
+                    .bname{
+                        margin-top: 130px;
+                        font-size: 32px;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+.sti04{
+    .container{
+        .content{
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 1px 8px 3px #d4d4d4;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+            li{
+                cursor: pointer;
+                transition: all .5s;
+                &:hover{
+                    opacity: .6;
+                    box-shadow: 0 0 8px 1px #d4d4d4;
+                }
+            }
+            .cate{
+                width: 320px;
+                height: 580px;
+                overflow: hidden;
+                position: relative;
+                float: left;
+                color: #333;
+                .left_img{
+                    width: 320px;
+                    height: 440px;
+                    position: relative;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    text-align: center;
+                    outline: none;
+                    transition: all .5s;
+                    &:hover{
+                        opacity: .6;
+                        box-shadow: 0 0 8px 1px #d4d4d4;
+                    }
+                }
+                .cateon{
+                    height: 175px;
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    width:100%;
+                    ul{
+                        background-color: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        width: 280px;
+                        height: 120px;
+                        padding:25px 20px 15px 20px;
+                        border-radius: 10px 10px 0 10px;
+                        box-shadow: 0 0 10px #757575;
+                        li{
+                            width: 47%;
+                            line-height:40px;
+                            height: 40px;
+                            float: left;
+                            display: inline-block;
+                            font-size: 12px;
+                            text-align: center;
+                        }
+                    }
+                    .tit{
+                        background-color: #7fced2;
+                        width: 210px;
+                        line-height:35px;
+                        height: 35px;
+                        position: absolute;
+                        top:0;
+                        left:50%;
+                        margin-left: -105px;
+                        text-align: center;
+                        font-size: 12px;
+                        color:#333;
+                        border-radius: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .regt{
+                width: 880px;
+                float: left;
+                color:#333;
+                .regt_le{
+                    overflow: hidden;
+                    position: relative;
+                    float: left;
+                    li{
+                        height: 290px;
+                        width: 290px;
+                        overflow: hidden;
+                        display: block;
+                        position: relative;
+                    }
+                }
+                .regt_ri{
+                    width: 590px;
+                    float: left;
+                    color: #333;
+                    overflow: hidden;
+                    li{
+                        width: 195px;
+                        height: 290px;
+                        float: left;
+                        display: inline-block;
+                        border-bottom: 1px solid #f0f0f0;
+                        box-sizing: border-box;
+                        transition: all .5s;
+                        position: relative;
+                        p{
+                            position: absolute;
+                            left:0;
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .cross-item{
+                            top:24px;
+                            font-size: 18px;
+                            font-weight: 300;
+                            color:#333;
+
+                        }
+                        .cross-name-pri{
+                            top:56px;
+                            .cross-name{
+                                color: #999;
+                                font-size: 14px;
+                                margin-right: 14px;
+                            }
+                            .cross-price{
+                                color: #C81417;
+                                font-size: 14px;
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .cross-scroll{
+            background-color: #fff;
+            border-radius: 10px;
+            width: 100%;
+            height: 90px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+            .box{
+                width: 1115px;
+                overflow: hidden;
+                height: 50px;
+                margin: auto;
+                margin-top: 20px;
+                position: relative;
+                ul{
+                    width: 9999px;
+                }
+                li{
+                    width: 140px;
+                    height: 50px;
+                    float: left;
+                    display: inline-block;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+            .prev{
+                position: absolute;
+                left:0;
+                top:0px;
+                width: 22px;
+                height: 91px;
+                cursor: pointer;
+                background: url("../css/images/index-logoScroll.png") no-repeat 0 0;
+            }
+            .next{
+                position: absolute;
+                right:0;
+                top:0;
+                width: 22px;
+                height: 91px;
+                cursor: pointer;
+                background: url("../css/images/index-logoScroll.png") no-repeat -45px 0;
+            }
+        }
+    }
+}
+.sti04{
+    background-color: #eee;
+}
+.sti05{
+    width: 100%;
+    background-color: #eee;
+    .container{
+        .content{
+            width: 1200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 0px #d4d4d4;
+            overflow: hidden;
+            height: 615px;
+            position: relative;
+            .cate-1{
+                width: 400px;
+                height: 615px;
+                position: relative;
+                overflow: hidden;
+                float: left;
+                .lft_img{
+                    width: 400px;
+                    height: 440px;
+                    position: relative;
+                    overflow: hidden;
+                    top:0;
+                    left:0;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all .5s;
+                    &:hover{
+                        opacity:.6;
+                        box-shadow: 0 0 8px 0 #d4d4d4;
+                    }
+                }
+                .cart-cont{
+                    height: 120px;
+                    position: absolute;
+                    bottom:80px;
+                    left: 0;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0 0 8px 0 #d4d4d4;
+                    width: 100%;
+                    ul{
+                        width: 320px;
+                        margin-top: 10px;
+                        margin: auto;
+                        li{
+                            width: 25%;
+                            float: left;
+                            display: inline-block;
+                            line-height: 31px;
+                            height: 31px;
+                            font-size: 13px;
+                            a{
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+            .remond{
+                width: 800px;
+                position: relative;
+                float: left;
+                li{
+                    transition: all .5s;
+                    &:hover{
+                        opacity:.6;
+                        box-shadow: 0 0 8px 0 #d4d4d4;
+                    }
+                }
+                .up{
+                    width: 800px;
+                    height: 220px;
+                    display: block;
+                    li{
+                        width: 400px;
+                        height: 220px;
+                        position: relative;
+                        overflow: hidden;
+                        float: left;
+                        display: inline-block;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                }
+                .down{
+                    width: 800px;
+                    height: 395px;
+                    overflow: hidden;
+                    margin-left: -1px;
+                    li{
+                        position: relative;
+                        width: 199px;
+                        height: 198px;
+                        float: left;
+                        display: inline-block;
+                        overflow: hidden;
+                        border-bottom: 1px solid #f0f0f0;
+                        border-left: 1px solid #f0f0f0;
+                        box-sizing: border-box;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                }
+            }
+            .outdoor-scroll{
+                background: #fff;
+                border-radius: 10px;
+                width: 400px;
+                height: 90px;
+                position: absolute;
+                overflow: hidden;
+                border-top: 1px solid #f5f5f5;
+                box-shadow: 0 0 10px 0 #f5f5f5;
+                bottom:0;
+                left:0;
+                .box{
+                    width: 345px;
+                    overflow: hidden;
+                    height: 63px;
+                    display: block;
+                    margin: 15px auto 0;
+                    color: #333;
+                    li{
+                        width: 115px;
+                        height: 63px;
+                        float: left;
+                        display: inline-block;
+                        overflow: hidden;
+                        text-align: center;
+                        vertical-align: middle;
+                        transition: all .5s;
+                        &:hover{
+                            opacity:.6;
+                            box-shadow: 0 0 6px 0 #d4d4d4;
+
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .prev{
+                    position: absolute;
+                    left:0;
+                    top:0px;
+                    width: 22px;
+                    height: 91px;
+                    cursor: pointer;
+                    background: url("../css/images/index-logoScroll.png") no-repeat 0 0;
+
+                }
+                .next{
+                    position: absolute;
+                    right:0;
+                    top:0;
+                    width: 22px;
+                    height: 91px;
+                    cursor: pointer;
+                    background: url("../css/images/index-logoScroll.png") no-repeat -45px 0;
+                }
+            }
+        }
+    }
+}

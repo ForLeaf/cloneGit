@@ -11,7 +11,7 @@ input { outline: none; }
 
 .clear-fix:after { content: ''; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
 
-.side_cart { position: fixed; right: -330px; top: 60px; width: 385px; height: 600px; border: 1px solid transparent; }
+.side_cart { position: fixed; right: -330px; top: 40px; width: 385px; height: 600px; border: 1px solid transparent; }
 
 .side_cart .right-cont { box-sizing: border-box; width: 329px; height: 600px; background-color: #fff; z-index: 22; position: absolute; right: 0; top: 0; border: 1px solid #ccc; }
 
@@ -68,6 +68,8 @@ input { outline: none; }
 .cartlist .goods .goods_img img { width: 100%; }
 
 .cartlist .goods .goods_msg { font: 12px/1.4 'arial'; padding-right: 14px; padding-top: 18px; }
+
+.cartlist .goods .goods_msg .goods_tit { width: 196px; height: 32px; overflow: hidden; }
 
 .cartlist .goods .goods_msg .goods_style { margin-top: 4px; color: #bbb; }
 

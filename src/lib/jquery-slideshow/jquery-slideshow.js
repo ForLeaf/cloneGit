@@ -8,7 +8,7 @@
 			buttons:true,
 			smallPictures:true,
 			autoCarousel:true,
-			carouselType:'show',
+			carouselType:'show'
 		};
 
 		this.each(function(idx,ele){

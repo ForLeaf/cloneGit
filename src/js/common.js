@@ -104,6 +104,16 @@ define(['jquery'],function($){
          * @param {[String]} path    [cookie保存路径]
          */
         setCookie : function (name,val,expires,path) {
+            var date = new Date();
+            date.setDate(date.getDate() +7);
+            var orr = {
+                name : 'zzz',
+                val : 'zzz',
+                expries : date,
+                path : '/'
+            };
+            var expires = expires? expires : orr.expries;
+            var path = path? path : orr.path;
             var str = name + '=' + val;
 
             if(expires){
@@ -139,8 +149,9 @@ define(['jquery'],function($){
             var now = new Date();
             now.setDate(now.getDate()-7);
 
-            // setCookie(name,null,now);
-            document.cookie = name + '=null;expires=' + now;
+            this.setCookie(name,'',now);
+
+            //document.cookie = name + '=null;expires=' + now;
         },
         /**
          * [动画函数]

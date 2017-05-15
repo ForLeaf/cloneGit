@@ -3,6 +3,7 @@
 @import "foot";
 @import "common";
 @import "reset";
+
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -430,3 +431,4 @@
         }
     }
 }
+.u-flyer { display: block; width: 60px; height: 60px; border-radius: 50px; position: fixed; z-index: 9999; }
