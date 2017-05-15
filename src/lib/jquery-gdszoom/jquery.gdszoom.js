@@ -53,8 +53,8 @@
 
             if(opt.position === 'right'){
             	$bigZoom.css({
-            		left:$smallPic.offset().left + $smallPic.outerWidth() + opt.gap - 15,
-            		top:$smallPic.offset().top + 205
+            		left:$smallPic.offset().left + $smallPic.outerWidth() + opt.gap - 15 ,
+            		top:$smallPic.offset().top
             	});
             }else if(opt.position === 'left'){
             	$bigZoom.css({

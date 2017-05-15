@@ -63,6 +63,9 @@ require(['config'],function () {
                     //1)
                     var carlist = com.getCookie('carlist');
                     carlist = carlist ? JSON.parse(carlist) : [];
+                    var login = com.getCookie('login');
+                    login = login ? login : null;
+                   
 
                     var guid = $('.data_mid').attr('data-guid');
                     var goods_img = $('.currentimg').attr('src');
@@ -99,14 +102,12 @@ require(['config'],function () {
                     com.setCookie('carlist',JSON.stringify(carlist));
 
 
-
-
                     // 2）把cookie中的商品信息写入#carList
                     var qtysum = 0;
 
                     var mokuai = carlist.map(function(item){
                         qtysum += Number(item.qty);
-                        return `<div class="goods ${item.guid}">
+                        return `<div class="goods" data-guid="${item.guid}">
                         <div class="check">
                         <input type="checkbox" class="goods_check">
                         </div>
@@ -129,8 +130,29 @@ require(['config'],function () {
                     $('.cartlist').html(mokuai);
                     $('#end').find('.num').html(qtysum);
                     $('.shopping_car').find('.num').html(qtysum);
+                    
+                    
+    
+                    for(var i = 0; i < carlist.length; i++){
+                        $.post('../php/goodsList.php',{
+                            elephone : login,
+                            guid : carlist[i].guid,
+                            imgurl : carlist[i].imgurl,
+                            goodsname : carlist[i].name,
+                            price : carlist[i].price,
+                            qty : carlist[i].qty
+                        }, function(response){
+                            var $obj = eval('(' + response + ')');
+                            if($obj.state){
+                                console.log($obj.state);
+                            } else {
+                                console.log($obj.message);
+                            }
+                        })
+                    }
                 });
-
+    
+    
                 //点击改变样式
                 $('.patter').click(function () {
                     $(this).css('border-color','#f00');

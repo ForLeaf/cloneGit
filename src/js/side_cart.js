@@ -80,25 +80,37 @@ require(['config'],function () {
                 $('.checkall').prop('checked', $checked.length === $('.goods_check').length);
                 dataChange();
 
-            }).on('click', '.goods_closebtn', function () {
-                $(this).parents('.goods').remove();
-
             }).on('click', '.account-btn', function () {
 
             })
 
-
+            
             // 1）获取cookie
             var goodslist = com.getCookie('carlist');
             var qtysum = 0;
             // 把json字符串转换成js对象
             goodslist = goodslist ? JSON.parse(goodslist) : [];
+            
+            /*var login = com.getCookie('login');
+            login = login? login : null;
+            
+            if(login){
+                $.post('http://localhost/git/src/php/getList.php',{
+                    elephone : login,
+                }, function(response){
+                    var $obj = eval('(' + response + ')');
+                    if($obj.state){
+                    
+                    } else {
+                        console.log($obj.message);
+                    }
+                })
+            }*/
 
             // 2）把cookie中的商品信息写入#carList
-
             var mokuai = goodslist.map(function(item){
                 qtysum += Number(item.qty);
-                return `<div class="goods ${item.guid}">
+                return `<div class="goods" data-guid="${item.guid}">
                     <div class="check">
                     <input type="checkbox" class="goods_check">
                     </div>
@@ -127,7 +139,7 @@ require(['config'],function () {
             // 移除DOM节点
             // 清除cookie中对应的商品信息
             $('.cartlist').on('click','.goods_closebtn',function(){
-
+                console.log(goodslist)
                 var $parent = $(this).parents('.goods');
                 var num = $parent.attr('data-guid');
 
@@ -136,14 +148,23 @@ require(['config'],function () {
                 // 清除cookie中对应的商品信息
                 for(var i=0;i<goodslist.length;i++){
 
-                    if(goodslist[i].guid === num){
+                    if(goodslist[i].guid == num){
                         goodslist.splice(i,1);
                         break;
                     }
                 }
-
+                console.log(num,goodslist)
                 // 删除后重写cookie
                 com.setCookie('carlist',JSON.stringify(goodslist));
+    
+                /*var $num = 0;
+    
+                goodslist.forEach(function (ele) {
+                    $num +=ele.qty;
+                });
+    
+                $('.shopping_car').find('.num').html($num);
+                $('#end').find('.num').html($num);*/
             })
 
 
@@ -170,6 +191,7 @@ require(['config'],function () {
                 },30)
 
             })
+            
         })
     });
 

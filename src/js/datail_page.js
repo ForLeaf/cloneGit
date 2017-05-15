@@ -22,6 +22,9 @@ require(['config'],function () {
                 var carlist = com.getCookie('carlist');
                 var qtysum = 0;
                 carlist = carlist ? JSON.parse(carlist) : [];
+    
+                var login = com.getCookie('login');
+                login = login ? login : null;
 
                 $('.goods_right').on('click', '.goods_btn', function () {
                     //飞入效果
@@ -91,7 +94,7 @@ require(['config'],function () {
                     var qtysum = 0;
                     var mokuai = carlist.map(function (item) {
                         qtysum += Number(item.qty);
-                        return `<div class="goods ${item.guid}">
+                        return `<div class="goods" data-guid="${item.guid}">
                             <div class="check">
                             <input type="checkbox" class="goods_check">
                             </div>
@@ -116,6 +119,24 @@ require(['config'],function () {
                     //
                     $('#end').find('.num').html(qtysum);
                     $('.shopping_car').find('.num').html(qtysum);
+    
+                    for(var i = 0; i < carlist.length; i++){
+                        $.post('../php/goodsList.php',{
+                            elephone : login,
+                            guid : carlist[i].guid,
+                            imgurl : carlist[i].imgurl,
+                            goodsname : carlist[i].name,
+                            price : carlist[i].price,
+                            qty : carlist[i].qty
+                        }, function(response){
+                            var $obj = eval('(' + response + ')');
+                            if($obj.state){
+                                console.log($obj.state);
+                            } else {
+                                console.log($obj.message);
+                            }
+                        })
+                    }
 
 
                 });
